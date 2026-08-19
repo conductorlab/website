@@ -1,0 +1,44 @@
+/*
+ * Design tokens — ported verbatim from the Condra Claude Design source
+ * (Condra.dc.html). Light values live on :root (the default); dark values
+ * override under [data-theme="dark"]. Do not hardcode hex colors anywhere
+ * else in this codebase — everything reads from these custom properties.
+ */
+
+:root {
+  --bg: #f7f8fb;
+  --surface: #eef0f6;
+  --surface-2: #e6e9f2;
+  --panel: #ffffff;
+  --border: rgba(20, 23, 48, 0.12);
+  --border-strong: rgba(20, 23, 48, 0.20);
+  --text: #0c0e1a;
+  --text-muted: #4a4e66;
+  --text-faint: #7c8099;
+  --accent: #4b56d6;
+  --accent-hover: #3a44c4;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(75, 86, 214, 0.10);
+  --grid-line: rgba(20, 23, 48, 0.055);
+  --shadow: 0 1px 2px rgba(20, 23, 48, 0.06), 0 10px 30px -14px rgba(20, 23, 48, 0.22);
+  --shadow-lg: 0 1px 2px rgba(20, 23, 48, 0.06), 0 28px 56px -22px rgba(20, 23, 48, 0.28);
+}
+
+[data-theme='dark'] {
+  --bg: #08080a;
+  --surface: #0e0e11;
+  --surface-2: #141418;
+  --panel: #101014;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #f4f4f5;
+  --text-muted: #a1a1ab;
+  --text-faint: #6d6d78;
+  --accent: #818cf8;
+  --accent-hover: #9aa2fb;
+  --accent-contrast: #08080a;
+  --accent-soft: rgba(129, 140, 248, 0.12);
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 1px 2px rgba(0, 0, 0, 0.4), 0 30px 60px -24px rgba(0, 0, 0, 0.7);
+}
