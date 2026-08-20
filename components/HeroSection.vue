@@ -8,15 +8,15 @@ const { hero } = siteContent
   <section id="top" class="hero">
     <div class="grid-bg" aria-hidden="true" />
     <div class="inner">
-      <div class="badge">
+      <div class="badge label-mono">
         <span class="dot" aria-hidden="true" />
         {{ hero.badge }}
       </div>
       <h1>{{ hero.heading }}</h1>
-      <p class="subhead">{{ hero.subhead }}</p>
+      <p class="subhead copy-lead">{{ hero.subhead }}</p>
       <div class="actions">
         <a :href="hero.cta.href" class="cta">{{ hero.cta.label }}</a>
-        <span class="note">{{ hero.note }}</span>
+        <span class="note helper-text">{{ hero.note }}</span>
       </div>
     </div>
   </section>
@@ -55,10 +55,7 @@ const { hero } = siteContent
   border: 1px solid var(--border);
   border-radius: 100px;
   background: var(--surface);
-  font-size: 12.5px;
-  color: var(--text-muted);
   margin-bottom: 32px;
-  font-family: 'Geist Mono', monospace;
 }
 
 .dot {
@@ -83,11 +80,6 @@ h1 {
 .subhead {
   max-width: 640px;
   margin: 0 0 40px;
-  font-size: clamp(19px, 2.4vw, 23px);
-  line-height: 1.5;
-  color: var(--text-muted);
-  text-wrap: pretty;
-  font-weight: 400;
 }
 
 .actions {
@@ -115,9 +107,4 @@ h1 {
   color: var(--accent-contrast);
 }
 
-.note {
-  font-size: 14px;
-  color: var(--text-muted);
-  font-family: 'Geist Mono', monospace;
-}
 </style>
