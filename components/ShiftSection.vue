@@ -8,15 +8,15 @@ const { shift } = siteContent
   <section :id="shift.id" class="shift">
     <div class="inner">
       <div class="copy">
-        <div class="eyebrow">{{ shift.eyebrow }}</div>
-        <h2>{{ shift.heading }}</h2>
-        <div class="paragraphs">
+        <div class="eyebrow section-eyebrow">{{ shift.eyebrow }}</div>
+        <h2 class="heading-section section-heading">{{ shift.heading }}</h2>
+        <div class="paragraphs copy-lead">
           <p v-for="(p, i) in shift.paragraphs" :key="i">{{ p }}</p>
         </div>
       </div>
       <div class="cards">
         <div v-for="card in shift.cards" :key="card.label" class="card">
-          <div class="card-label" :class="{ accent: card.label === 'Requirement' }">{{ card.label }}</div>
+          <div class="card-label label-mono" :class="{ accent: card.label === 'Requirement' }">{{ card.label }}</div>
           <div class="card-body">{{ card.body }}</div>
         </div>
       </div>
@@ -42,32 +42,18 @@ const { shift } = siteContent
   max-width: 760px;
 }
 
-.eyebrow {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+.section-eyebrow {
   margin-bottom: 20px;
 }
 
-h2 {
+.section-heading {
   margin: 0 0 24px;
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  color: var(--text);
-  text-wrap: balance;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-muted);
   max-width: 680px;
 }
 .paragraphs p {
@@ -96,9 +82,6 @@ h2 {
 }
 
 .card-label {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13px;
-  color: var(--text-muted);
   margin-bottom: 12px;
 }
 .card-label.accent {

@@ -8,9 +8,9 @@ const { product } = siteContent
   <section :id="product.id" class="product">
     <div class="inner">
       <div class="intro">
-        <div class="eyebrow">{{ product.eyebrow }}</div>
-        <h2>{{ product.heading }}</h2>
-        <p>{{ product.intro }}</p>
+        <div class="eyebrow section-eyebrow">{{ product.eyebrow }}</div>
+        <h2 class="heading-section section-heading">{{ product.heading }}</h2>
+        <p class="copy-lead">{{ product.intro }}</p>
       </div>
       <div class="features">
         <article
@@ -20,7 +20,7 @@ const { product } = siteContent
           :class="{ first: i === 0, last: i === product.features.length - 1 }"
         >
           <div class="feat-text">
-            <span class="tag">{{ feature.tag }}</span>
+            <span class="tag label-mono">{{ feature.tag }}</span>
             <h3>{{ feature.title }}</h3>
             <p>{{ feature.body }}</p>
           </div>
@@ -47,31 +47,16 @@ const { product } = siteContent
   margin-bottom: 56px;
 }
 
-.eyebrow {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+.section-eyebrow {
   margin-bottom: 20px;
 }
 
-h2 {
+.section-heading {
   margin: 0 0 20px;
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  color: var(--text);
-  text-wrap: balance;
 }
 
 .intro p {
   margin: 0;
-  font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-muted);
-  text-wrap: pretty;
 }
 
 .features {
@@ -101,12 +86,6 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.tag {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13px;
-  color: var(--text-muted);
 }
 
 .feat-text h3 {

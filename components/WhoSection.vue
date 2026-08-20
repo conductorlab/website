@@ -8,13 +8,13 @@ const { who } = siteContent
   <section :id="who.id" class="who">
     <div class="inner">
       <div class="intro">
-        <div class="eyebrow">{{ who.eyebrow }}</div>
-        <h2>{{ who.heading }}</h2>
-        <p>{{ who.intro }}</p>
+        <div class="eyebrow section-eyebrow">{{ who.eyebrow }}</div>
+        <h2 class="heading-section section-heading">{{ who.heading }}</h2>
+        <p class="copy-lead">{{ who.intro }}</p>
       </div>
       <div class="who-grid">
         <div v-for="platform in who.platforms" :key="platform.name" class="platform-card">
-          <div class="platform-name">{{ platform.name }}</div>
+          <div class="platform-name label-mono">{{ platform.name }}</div>
           <div class="platform-body">{{ platform.body }}</div>
         </div>
       </div>
@@ -27,7 +27,7 @@ const { who } = siteContent
           </svg>
         </span>
         <div>
-          <div class="agency-title">{{ who.agencyCallout.title }}</div>
+          <div class="agency-title title-sm">{{ who.agencyCallout.title }}</div>
           <div class="agency-body">{{ who.agencyCallout.body }}</div>
         </div>
       </div>
@@ -54,31 +54,16 @@ const { who } = siteContent
   max-width: 640px;
 }
 
-.eyebrow {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+.section-eyebrow {
   margin-bottom: 20px;
 }
 
-h2 {
+.section-heading {
   margin: 0 0 20px;
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  color: var(--text);
-  text-wrap: balance;
 }
 
 .intro p {
   margin: 0;
-  font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-muted);
-  text-wrap: pretty;
 }
 
 .who-grid {
@@ -98,8 +83,6 @@ h2 {
 }
 
 .platform-name {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13px;
   color: var(--accent);
 }
 
@@ -133,9 +116,6 @@ h2 {
 }
 
 .agency-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
   margin-bottom: 4px;
 }
 
