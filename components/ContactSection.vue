@@ -39,7 +39,7 @@ async function onSubmit() {
 
       <div class="panel">
         <form v-if="status !== 'success'" class="form" novalidate @submit.prevent="onSubmit">
-          <p class="form-intro">{{ closingCta.formIntro }}</p>
+          <p class="form-intro helper-text">{{ closingCta.formIntro }}</p>
           <div class="field">
             <label for="contact-name">Name</label>
             <input
@@ -79,7 +79,7 @@ async function onSubmit() {
             <button type="submit" class="cta" :disabled="status === 'submitting'">
               {{ status === 'submitting' ? 'Sending…' : closingCta.formCta }}
             </button>
-            <a :href="`mailto:${contact.email}`" class="email-link">{{ closingCta.emailCta }}</a>
+            <a :href="`mailto:${contact.email}`" class="email-link helper-text">{{ closingCta.emailCta }}</a>
           </div>
         </form>
         <p v-else class="success" role="status">{{ closingCta.successMessage }}</p>
@@ -152,9 +152,6 @@ h2 {
 
 .form-intro {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--text-muted);
 }
 
 .field {
@@ -225,10 +222,6 @@ h2 {
   cursor: default;
 }
 
-.email-link {
-  font-size: 14px;
-  color: var(--text-muted);
-}
 .email-link:hover {
   color: var(--text);
 }
