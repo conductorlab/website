@@ -69,13 +69,13 @@ export const siteContent = {
     siteName: 'Condra',
     title: 'Condra — Get your store ready for agentic commerce',
     description:
-      "AI assistants are starting to buy on shoppers' behalf. Condra gets your store compliant, live on agent checkout, and measured — built for the merchants big platforms overlook.",
+      'AI assistants are starting to buy things for people. Condra gets your store ready — compliant, live on agent checkout, and easy to measure. Built for the merchants big platforms overlook.',
     ogImage: 'https://condra.dev/og-image.png',
   },
 
   announcement: {
     badge: 'New',
-    text: 'Now onboarding the first cohort of merchants',
+    text: 'Now onboarding our first merchants',
     href: '#contact',
   },
 
@@ -94,7 +94,7 @@ export const siteContent = {
     badge: 'Infrastructure for agentic commerce',
     heading: 'Get your store ready for the agents that will do the buying.',
     subhead:
-      "AI assistants are starting to buy on shoppers' behalf. Condra gets your store compliant, live on agent checkout, and measured — built for the merchants big platforms overlook.",
+      'AI assistants are starting to buy things for people. Condra gets your store ready: compliant, live on agent checkout, and easy to measure. Built for the merchants big platforms overlook.',
     cta: { label: 'Start a conversation', href: '#contact' },
     note: 'No product to sign up for yet — just a conversation.',
   },
@@ -104,13 +104,13 @@ export const siteContent = {
     eyebrow: '01 — The shift',
     heading: 'Shopping is moving from browsers to agents.',
     paragraphs: [
-      "A purchase used to mean a person on your storefront. Now Google's AI Mode, Gemini, and others carry the whole task to payment — comparing, confirming, and checking out without ever loading your page.",
-      'When the buyer is software, the rules change. Agents need machine-readable product data, a checkout they’re allowed to use, and a merchant that meets the spec. Stores that aren’t structured for this don’t show up — the agent just picks someone who is.',
-      "Volume is still small today. That's the point: eligibility is slow, mechanical work, and the merchants who do it now are the ones agents can choose from later.",
+      "A sale used to mean a real person browsing your store. Now tools like Google's AI Mode and Gemini can do the whole job themselves — comparing products, confirming the order, and paying — without ever opening your website.",
+      'When software is the buyer, the rules change. An agent needs product data it can read, a checkout it’s allowed to use, and a store that meets the technical spec. If your store isn’t set up this way, the agent won’t see it — it will just buy from a store that is.',
+      'Not many purchases work this way yet. That’s exactly why now matters: getting ready is slow, hands-on work, and only the merchants who do it early will be ones agents can choose from later.',
     ],
     cards: [
-      { label: 'Then', body: 'Human browses your storefront, evaluates, and checks out.' },
-      { label: 'Now', body: 'An agent reads structured data and transacts through a permitted checkout.' },
+      { label: 'Then', body: 'A person browses your store, decides, and checks out.' },
+      { label: 'Now', body: 'An agent reads your product data and pays through an approved checkout.' },
       { label: 'Requirement', body: 'Be structured, compliant, and eligible — or be invisible to the agent.' },
     ] as ThenNowCard[],
   },
@@ -124,7 +124,7 @@ export const siteContent = {
       {
         tag: 'a1 — get live',
         title: 'Get compliant and go live',
-        body: 'We map your catalog, checkout, and policies to what agent surfaces require, fix the gaps, and get your store eligible to transact — without you rebuilding checkout or hiring for a spec that’s still moving.',
+        body: 'We check your catalog, checkout, and policies against what agents require, fix what’s missing, and get your store eligible to sell to them — without you rebuilding checkout or hiring for a spec that’s still moving.',
         visual: {
           kind: 'readiness',
           panelLabel: 'agent_readiness',
@@ -140,7 +140,7 @@ export const siteContent = {
       {
         tag: 'a2 — measure',
         title: 'See what the channel earns',
-        body: 'Agent traffic is invisible in standard analytics. Condra isolates it: what agents are buying, what’s converting, and — just as important — where requests are failing and revenue is leaking out before checkout completes.',
+        body: 'Standard analytics can’t see agent traffic. Condra shows it clearly: what agents are buying, what’s converting, and where requests are failing before checkout finishes — so you can see the revenue you’re losing today.',
         visual: {
           kind: 'channel',
           panelLabel: 'agent_channel',
@@ -158,7 +158,7 @@ export const siteContent = {
       {
         tag: 'a3 — stay current',
         title: 'Stay compliant as the spec moves',
-        body: 'The standards for agent-driven payments are still being written and will keep changing. Condra tracks them and updates your integration automatically, so staying eligible isn’t a recurring engineering project on your side.',
+        body: 'The rules for agent payments are still being written, and they’ll keep changing. Condra tracks every update and keeps your integration current automatically, so staying eligible never becomes another engineering project for your team.',
         visual: {
           kind: 'spec',
           panelLabel: 'spec_version',
@@ -174,7 +174,7 @@ export const siteContent = {
       {
         tag: 'a4 — one integration',
         title: 'One integration, every surface',
-        body: 'Google’s AI Mode, Gemini, and whatever comes next each have their own requirements. You integrate Condra once; we handle the differences between surfaces and add new ones as they open, so you’re not maintaining a separate connection per agent.',
+        body: 'Google’s AI Mode, Gemini, and whatever comes next each work differently. You connect to Condra once — we handle the differences and add new surfaces as they launch, so you’re never maintaining a separate connection per agent.',
         visual: {
           kind: 'surfaces',
           panelLabel: 'surfaces',
@@ -193,16 +193,16 @@ export const siteContent = {
     id: 'who',
     eyebrow: "03 — Who it's for",
     heading: "Mid-market merchants, and the agencies who run their stacks.",
-    intro: "Do $1M–$50M and not on a platform that hands you agent-readiness for free? This is for you — across the stacks merchants actually run.",
+    intro: 'Doing $1M–$50M in revenue, and not on a platform that gives you agent-readiness for free? This is for you — whatever stack you run.',
     platforms: [
-      { name: 'WooCommerce', body: 'Plugin-based stores that need eligibility without a re-platform.' },
-      { name: 'Magento', body: 'Complex catalogs and checkout flows, mapped to what agents read.' },
-      { name: 'Headless', body: 'Custom front ends where structured data and checkout are decoupled.' },
-      { name: 'Custom', body: 'Bespoke stacks that need a pragmatic path, not a rebuild.' },
+      { name: 'WooCommerce', body: 'Plugin-based stores that need to get eligible without switching platforms.' },
+      { name: 'Magento', body: 'Complex catalogs and checkout flows, made readable to agents.' },
+      { name: 'Headless', body: 'Custom front ends where product data and checkout live apart — we connect them for agents.' },
+      { name: 'Custom', body: 'One-off systems that need a practical path forward, not a rebuild.' },
     ] as PlatformCard[],
     agencyCallout: {
       title: 'Agencies & systems integrators',
-      body: 'Offer agent-readiness to your merchant clients without building and maintaining the compliance layer yourself. One integration you can deploy across every store you manage.',
+      body: 'Offer agent-readiness to your clients without building or maintaining the compliance layer yourself. One integration, deployed across every store you manage.',
     },
   },
 
@@ -210,8 +210,8 @@ export const siteContent = {
     eyebrow: "04 — Who's building it",
     heading: 'Built by people who work on real payments infrastructure.',
     paragraphs: [
-      'Condra is built by people who’ve run checkout at scale inside a major retailer — and now build the plumbing for agent-driven payments.',
-      'That combination is the point. Agent-readiness sits where production payments meet an emerging spec. We’ve spent careers on the first and we’re building on the second — grounded in how checkout really behaves, not a whitepaper.',
+      'Condra is built by people who ran checkout at scale inside a major retailer, and now build the infrastructure for agent-driven payments.',
+      'That combination matters. Agent-readiness sits where real payments meet a spec that’s still being written. We’ve spent our careers on the first, and we’re building the second — based on how checkout actually behaves, not on a whitepaper.',
     ],
     card: {
       title: 'The Condra team',
@@ -228,7 +228,7 @@ export const siteContent = {
   closingCta: {
     id: 'contact',
     heading: 'Start the conversation now, so agents can pick you later.',
-    body: 'The market is early and eligibility takes time. A short call is the fastest way to see where your store stands — no pitch, no signup.',
+    body: 'The market is early, and getting ready takes time. A short call is the fastest way to see where your store stands today — no pitch, no signup.',
     formCta: 'Start a conversation',
     emailCta: 'Or email us directly',
     formIntro: 'Tell us a little about your store — we’ll reply within a couple of business days.',

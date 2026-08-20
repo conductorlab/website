@@ -9,9 +9,9 @@ const { founder } = siteContent
     <div class="inner">
       <div class="founder-grid">
         <div>
-          <div class="eyebrow">{{ founder.eyebrow }}</div>
-          <h2>{{ founder.heading }}</h2>
-          <div class="paragraphs">
+          <div class="eyebrow section-eyebrow">{{ founder.eyebrow }}</div>
+          <h2 class="heading-section section-heading">{{ founder.heading }}</h2>
+          <div class="paragraphs copy-lead">
             <p v-for="(p, i) in founder.paragraphs" :key="i">{{ p }}</p>
           </div>
         </div>
@@ -19,13 +19,13 @@ const { founder } = siteContent
           <div class="card-head">
             <span class="card-icon" aria-hidden="true"><span class="card-icon-inner" /></span>
             <div>
-              <div class="card-title">{{ founder.card.title }}</div>
-              <div class="card-subtitle mono">{{ founder.card.subtitle }}</div>
+              <div class="card-title title-sm">{{ founder.card.title }}</div>
+              <div class="card-subtitle label-mono">{{ founder.card.subtitle }}</div>
             </div>
           </div>
           <div class="facts">
             <div v-for="fact in founder.card.facts" :key="fact.label" class="fact">
-              <div class="fact-label mono">{{ fact.label }}</div>
+              <div class="fact-label label-mono">{{ fact.label }}</div>
               <div class="fact-value">{{ fact.value }}</div>
             </div>
           </div>
@@ -53,32 +53,18 @@ const { founder } = siteContent
   align-items: center;
 }
 
-.eyebrow {
-  font-family: 'Geist Mono', monospace;
-  font-size: 13.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+.section-eyebrow {
   margin-bottom: 20px;
 }
 
-h2 {
+.section-heading {
   margin: 0 0 24px;
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  color: var(--text);
-  text-wrap: balance;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-muted);
   max-width: 520px;
 }
 .paragraphs p {
@@ -119,19 +105,6 @@ h2 {
   transform: rotate(45deg);
 }
 
-.card-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-}
-.card-subtitle {
-  font-size: 13.5px;
-  color: var(--text-muted);
-}
-.mono {
-  font-family: 'Geist Mono', monospace;
-}
-
 .facts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,8 +121,6 @@ h2 {
   border-bottom: none;
 }
 .fact-label {
-  font-size: 12px;
-  color: var(--text-muted);
   margin-bottom: 8px;
 }
 .fact-value {

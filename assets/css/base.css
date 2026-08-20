@@ -36,6 +36,54 @@ button {
   color: var(--accent-contrast);
 }
 
+/*
+ * Shared type scale (R12). One rule set per copy "type", used verbatim by
+ * every section so headings, eyebrows, lead paragraphs, and small mono
+ * labels never drift from each other. Components add layout-only rules
+ * (margin, max-width) in their own scoped styles; type never lives there.
+ */
+.eyebrow {
+  font-family: 'Geist Mono', monospace;
+  font-size: 13.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.heading-section {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+.copy-lead {
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.55;
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+.label-mono {
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.title-sm {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.helper-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 /* Visible focus states everywhere (R11) */
 a:focus-visible,
 button:focus-visible,
