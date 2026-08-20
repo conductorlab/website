@@ -105,7 +105,7 @@ h2 {
 
 .tag {
   font-family: 'Geist Mono', monospace;
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--text-muted);
 }
 

@@ -97,7 +97,7 @@ h2 {
 
 .card-label {
   font-family: 'Geist Mono', monospace;
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--text-muted);
   margin-bottom: 12px;
 }

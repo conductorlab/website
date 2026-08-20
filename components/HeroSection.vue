@@ -83,8 +83,8 @@ h1 {
 .subhead {
   max-width: 640px;
   margin: 0 0 40px;
-  font-size: clamp(19px, 2.4vw, 23px);
-  line-height: 1.5;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.55;
   color: var(--text-muted);
   text-wrap: pretty;
   font-weight: 400;
