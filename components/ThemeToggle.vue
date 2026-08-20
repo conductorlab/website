@@ -11,7 +11,7 @@ const { theme, toggleTheme } = useTheme()
     @click="toggleTheme"
   >
     <svg
-      v-if="theme === 'dark'"
+      class="icon icon-dark"
       width="16"
       height="16"
       viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ const { theme, toggleTheme } = useTheme()
       <path d="m19.07 4.93-1.41 1.41" />
     </svg>
     <svg
-      v-else
+      class="icon icon-light"
       width="16"
       height="16"
       viewBox="0 0 24 24"
@@ -67,5 +67,24 @@ const { theme, toggleTheme } = useTheme()
 .theme-toggle:hover {
   border-color: var(--border-strong);
   color: var(--text);
+}
+
+/*
+ * Both icons are always rendered (identical markup on server and client)
+ * so hydration never has to reconcile two structurally different SVGs —
+ * that mismatch (light icon has 1 child, dark icon has 9) is what crashed
+ * hydration for visitors whose stored theme differed from the statically
+ * generated page's baked-in default. Which icon is visible is decided
+ * purely by CSS, driven by the `data-theme` attribute on <html> that's
+ * already set correctly before first paint (see app.vue's no-flash script).
+ */
+.icon-dark {
+  display: none;
+}
+:global([data-theme='dark']) .icon-dark {
+  display: block;
+}
+:global([data-theme='dark']) .icon-light {
+  display: none;
 }
 </style>
