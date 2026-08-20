@@ -88,6 +88,10 @@ const { product } = siteContent
   gap: 16px;
 }
 
+.tag {
+  font-size: 14.5px;
+}
+
 .feat-text h3 {
   margin: 0;
   font-size: 24px;

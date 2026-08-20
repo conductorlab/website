@@ -13,7 +13,7 @@ const { hero } = siteContent
         {{ hero.badge }}
       </div>
       <h1>{{ hero.heading }}</h1>
-      <p class="subhead">{{ hero.subhead }}</p>
+      <p class="subhead copy-lead">{{ hero.subhead }}</p>
       <div class="actions">
         <a :href="hero.cta.href" class="cta">{{ hero.cta.label }}</a>
         <span class="note helper-text">{{ hero.note }}</span>
@@ -80,11 +80,6 @@ h1 {
 .subhead {
   max-width: 640px;
   margin: 0 0 40px;
-  font-size: clamp(19px, 2.4vw, 23px);
-  line-height: 1.5;
-  color: var(--text-muted);
-  text-wrap: pretty;
-  font-weight: 400;
 }
 
 .actions {

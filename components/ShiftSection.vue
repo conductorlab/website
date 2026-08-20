@@ -82,6 +82,7 @@ const { shift } = siteContent
 }
 
 .card-label {
+  font-size: 14.5px;
   margin-bottom: 12px;
 }
 .card-label.accent {
