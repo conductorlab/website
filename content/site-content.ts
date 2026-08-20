@@ -69,7 +69,7 @@ export const siteContent = {
     siteName: 'Condra',
     title: 'Condra — Get your store ready for agentic commerce',
     description:
-      "AI assistants are starting to buy on shoppers' behalf. Condra gets your store compliant, live on agent checkout, and measured — built for the merchants big platforms overlook.",
+      'AI assistants are starting to buy for people. Condra makes it easy: get compliant, go live on agent checkout, and track every sale. Built for the merchants big platforms overlook.',
     ogImage: 'https://condra.dev/og-image.png',
   },
 
@@ -94,7 +94,7 @@ export const siteContent = {
     badge: 'Infrastructure for agentic commerce',
     heading: 'Get your store ready for the agents that will do the buying.',
     subhead:
-      "AI assistants are starting to buy on shoppers' behalf. Condra gets your store compliant, live on agent checkout, and measured — built for the merchants big platforms overlook.",
+      'AI assistants are starting to buy for people. Condra makes it easy: get compliant, go live on agent checkout, and track every sale. Built for the merchants big platforms overlook.',
     cta: { label: 'Start a conversation', href: '#contact' },
     note: 'No product to sign up for yet — just a conversation.',
   },
@@ -104,9 +104,9 @@ export const siteContent = {
     eyebrow: '01 — The shift',
     heading: 'Shopping is moving from browsers to agents.',
     paragraphs: [
-      "A purchase used to mean a person on your storefront. Now Google's AI Mode, Gemini, and others carry the whole task to payment — comparing, confirming, and checking out without ever loading your page.",
-      'When the buyer is software, the rules change. Agents need machine-readable product data, a checkout they’re allowed to use, and a merchant that meets the spec. Stores that aren’t structured for this don’t show up — the agent just picks someone who is.',
-      "Volume is still small today. That's the point: eligibility is slow, mechanical work, and the merchants who do it now are the ones agents can choose from later.",
+      "A sale used to start with a person browsing your store. Now tools like Google's AI Mode and Gemini can do it all — compare, confirm, and pay — without ever opening your site.",
+      'When software is the buyer, the rules change. It needs product data it can read, a checkout it’s allowed to use, and a store that meets the spec. Miss any of that, and the agent just buys elsewhere.',
+      'Few purchases work this way yet. That’s why now matters: getting ready takes time, and only merchants who start early will be there when agents are ready to buy.',
     ],
     cards: [
       { label: 'Then', body: 'Human browses your storefront, evaluates, and checks out.' },
