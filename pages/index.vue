@@ -38,6 +38,7 @@ useHead({
       <ContactSection />
     </main>
     <AppFooter />
+    <BackToTop />
   </div>
 </template>
 
@@ -45,7 +46,6 @@ useHead({
 .page {
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
   background: var(--bg);
   position: relative;
 }
