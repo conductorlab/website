@@ -15,7 +15,11 @@ defineProps<{ visual: FeatureVisual }>()
       </div>
       <div class="checklist">
         <div v-for="item in visual.checklist" :key="item.label" class="checklist-item">
-          <span class="check" aria-hidden="true">✓</span>
+          <span class="check" aria-hidden="true">
+            <svg width="9" height="7" viewBox="0 0 9 7" fill="none">
+              <path d="M1 3.6L3.3 5.8L8 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
           {{ item.label }}
           <span class="mono status">{{ item.status }}</span>
         </div>
@@ -86,12 +90,30 @@ defineProps<{ visual: FeatureVisual }>()
 
 <style scoped>
 .visual {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
   padding: 22px;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.visual:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.visual::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -25%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: -1;
 }
 .visual.spec,
 .visual.surfaces {
@@ -135,6 +157,7 @@ defineProps<{ visual: FeatureVisual }>()
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
+  animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
 .checklist {
@@ -150,11 +173,23 @@ defineProps<{ visual: FeatureVisual }>()
   color: var(--text);
 }
 .check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-soft);
   color: var(--accent);
 }
 .status {
   margin-left: auto;
-  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: 100px;
+  background: var(--surface-2);
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: var(--text-muted);
 }
 
@@ -190,23 +225,29 @@ defineProps<{ visual: FeatureVisual }>()
   align-items: flex-end;
   gap: 10px;
   height: 120px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
 .bar-col {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 3px;
+  gap: 4px;
   height: 100%;
 }
 .bar-seg {
-  border-radius: 3px;
+  border-radius: 4px;
+  transition: filter 0.2s ease;
+}
+.bar-col:hover .bar-seg {
+  filter: brightness(1.08);
 }
 .bar-seg.strong {
-  background: var(--border-strong);
+  background: linear-gradient(180deg, var(--border-strong), var(--border));
 }
 .bar-seg.accent {
-  background: var(--accent);
+  background: linear-gradient(180deg, var(--accent-hover), var(--accent));
 }
 
 .steps {
@@ -232,7 +273,11 @@ defineProps<{ visual: FeatureVisual }>()
   height: 14px;
   border: none;
   background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: ring-pulse 2.4s ease-in-out infinite;
+}
+@keyframes ring-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); }
+  50% { box-shadow: 0 0 0 7px var(--accent-soft); }
 }
 .step.next .step-dot {
   border-style: dashed;
@@ -255,6 +300,10 @@ defineProps<{ visual: FeatureVisual }>()
 }
 .step-line.upcoming {
   background: repeating-linear-gradient(90deg, var(--border-strong) 0 5px, transparent 5px 10px);
+  animation: dash-shift 1s linear infinite;
+}
+@keyframes dash-shift {
+  to { background-position: 10px 0; }
 }
 
 .surfaces-row {
@@ -278,22 +327,24 @@ defineProps<{ visual: FeatureVisual }>()
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-strong);
-  border-radius: 12px;
-  background: var(--panel);
+  border-radius: 14px;
+  background: linear-gradient(145deg, var(--panel), var(--surface-2));
+  box-shadow: var(--shadow);
 }
 .hub-icon-inner {
   width: 15px;
   height: 15px;
   background: var(--accent);
-  border-radius: 3px;
+  border-radius: 4px;
   transform: rotate(45deg);
 }
 .connector {
   width: 44px;
   height: 96px;
-  border-left: 2px solid var(--border-strong);
-  border-top: 2px solid var(--border-strong);
-  border-bottom: 2px solid var(--border-strong);
+  border-left: 1.5px solid var(--border-strong);
+  border-top: 1.5px solid var(--border-strong);
+  border-bottom: 1.5px solid var(--border-strong);
+  border-radius: 16px 0 0 16px;
   flex-shrink: 0;
 }
 .surface-list {
@@ -312,6 +363,11 @@ defineProps<{ visual: FeatureVisual }>()
   background: var(--panel);
   font-size: 14px;
   color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.surface-item:not(.dashed):hover {
+  border-color: var(--border-strong);
+  transform: translateX(2px);
 }
 .surface-item.dashed {
   border: 1px dashed var(--border-strong);
